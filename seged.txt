@@ -1,0 +1,7 @@
+rendezni abc sorrendben 
+order by sql
+
+
+gomb felirata ++
+
+******************************************************
