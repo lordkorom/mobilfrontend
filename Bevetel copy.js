@@ -43,10 +43,36 @@ export default class App extends Component {
             renderItem={({ item }) => (
 
               <View style={{marginBottom:30}}>
-              <Text style={{fontSize:30,color:'darkred',textAlign:'center', flex:1}}>
+              <Text style={{fontSize:30,color:'darkred',textAlign:'center'}}>
                 {item.fajta_fajta}
               </Text>
               <View style={styles.centeredView}>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert("Modal has been closed.");
+          setModalVisible(!modalVisible);
+        }}
+      >
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>adj meg egy összeget!</Text>
+            <TextInput
+        style={{borderColor:"black", borderWidth: 3} }
+                 
+        value={text}
+      />
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}
+            >
+              <Text style={styles.textStyle}>hozzáadás</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
       <Pressable
         style={[styles.button, styles.buttonOpen]}
         onPress={() => setModalVisible(true)}

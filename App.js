@@ -41,7 +41,7 @@ export default function App() {
         <Drawer.Screen name="Home" component={HomeScreen} />
         <Drawer.Screen name="Notifications" component={NotificationsScreen} />
         <Drawer.Screen name="Első" component={Elso_lap} />
-        <Drawer.Screen name="Bevetel" component={Bevetel_lap} />
+        <Drawer.Screen name="Bevétel" component={Bevetel_lap} />
         <Drawer.Screen name="megjelenit" component={Megjelenit_lap} />
       </Drawer.Navigator>
     </NavigationContainer>
